@@ -1,0 +1,185 @@
+/* Slider Container */
+.devotions-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 2rem auto;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Slides Wrapper */
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+/* Individual Slide */
+.devotion-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    box-sizing: border-box;
+}
+
+.devotion-slide.active {
+    opacity: 1;
+}
+
+.devotion-slide h3 {
+    color: #2a9bd8;
+    margin-bottom: 15px;
+}
+
+.bible-verse {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.author {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navigation Buttons */
+.slider-prev,
+.slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(42,155,216,0.8);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    background: rgba(42,155,216,1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-prev {
+    left: 5px;
+}
+
+.slider-next {
+    right: 5px;
+}
+
+/* Dots Navigation */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+    background: rgba(255,255,255,0.9);
+    transform: scale(1.2);
+}
+
+/* Schedule Badges */
+.schedule-badge {
+    margin-bottom: 15px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge.weekly {
+    background-color: #4CAF50;
+}
+
+.badge.monthly {
+    background-color: #2196F3;
+}
+
+.badge.yearly {
+    background-color: #9C27B0;
+}
+
+/* No Devotion Message */
+.no-devotion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    text-align: center;
+}
+
+.no-devotion p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Admin Styles */
+.schedule-fields {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.schedule-fields label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.schedule-fields select {
+    min-width: 200px;
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .devotion-slide {
+        padding: 20px;
+    }
+    
+    .slider-prev,
+    .slider-next {
+        width: 35px;
+        height: 35px;
+        padding: 10px;
+        margin-left: 50px;
+    }
+}
