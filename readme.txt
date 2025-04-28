@@ -118,4 +118,4 @@ You can target these elements for custom styling:
 == Contributing ==
 
 Contributions are welcome! Please submit pull requests to our GitHub repository:
-https://github.com/yourusername/daily-devotions-slider
+https://github.com/SandeepJustine/daily-devotions-slider
